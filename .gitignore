@@ -1,0 +1,10 @@
+# Instagram Account Information
+.env
+
+# Instagram Social Information
+people_to_unfollow.txt
+
+# Cache directories
+__pycache__/
+Cache/
+
