@@ -48,6 +48,21 @@ def wait_and_click_button(button_text, user):
         with open("errors.txt", "a+") as f:
             f.write(f"{user}\n")
 
+
+def wait_for_xpath_clickable(xpath, timeout=5):
+    """
+    Waits for an element identified by the given XPath to become clickable,
+    then clicks it.
+    """
+    try:
+        element = WebDriverWait(BROWSER, timeout).until(
+            EC.element_to_be_clickable((By.XPATH, xpath))
+        )
+        element.click()
+    except TimeoutException:
+        print(
+            f"Element with XPath {xpath} not clickable after {timeout} seconds.")
+
 def main():
     try:
         # Read file
@@ -66,7 +81,16 @@ def main():
         password_input.send_keys(PASSWORD)
         password_input.send_keys(Keys.ENTER)
         print(f"Logged in as {USERNAME}.")
-        
+
+        # Adjust these XPaths based on the actual structure of the 2FA page
+        print("Waiting for 2FA to be handled...")
+        # Adjust timeout as needed
+        wait_for_xpath_clickable(
+            '/html/body/div[2]/div/div/div[2]/div/div/div[1]/div[1]/div[2]/section/main/div/div/div/div')
+
+        # Handling notifications
+        print("Handling notifications...")
+        wait_for_xpath_clickable('/html/body/div[3]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/button[2]')
         # Logged in #
 
         # Unfollow usernames
