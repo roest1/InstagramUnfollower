@@ -8,6 +8,7 @@ Unfollow the people who don't follow you back on Instagram
 
 - [Python](https://www.python.org/downloads/)
 - [Miniconda](https://docs.anaconda.com/free/miniconda/miniconda-install/)
+- [Google Chrome](https://support.google.com/chrome/answer/95346?hl=en&co=GENIE.Platform%3DDesktop)
 
 ## How to use
 
@@ -42,7 +43,6 @@ Example:
 ```env
 IG_USERNAME=username
 IG_PASSWORD=password
-TWO_FACTOR=False
 USERNAMES_FILENAME=people_to_unfollow
 ```
 
@@ -64,11 +64,27 @@ Go through the list and remove any users you don't want to unfollow before proce
 
 **4. Run `unfollowList.py`**
 
+To see the script in action, run this command:
+
 ```bash
-python unfollowList.py
+python unfollow_txt_file.py
+```
+
+Or have the script run in the background:
+
+```bash
+python unfollow_txt_file.py --headless
 ```
 
 This will unfollow the users in `people_to_unfollow.txt`. It might take a while, so be patient. 
+
+**5. Go through `errors.txt`**
+
+It is likely some accounts weren't able to be unfollowed by the script for whatever reason. 
+
+You can try going back to your `.env` file and setting the `USERNAMES_FILENAME` to `errors`, saving, and then run the `unfollowList.py` program again to try unfollowing these users again. 
+
+Otherwise, you might just have to go and unfollow these people manually. (\_("/)_/)
 
 ---
 

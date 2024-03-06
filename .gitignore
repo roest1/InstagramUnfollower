@@ -1,5 +1,6 @@
 # Instagram Account Information
 .env
+errors.txt
 
 # Instagram Social Information
 people_to_unfollow.txt
