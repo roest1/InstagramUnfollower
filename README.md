@@ -76,7 +76,7 @@ Or have the script run in the background:
 python unfollow_txt_file.py --headless
 ```
 
-This will unfollow the users in `people_to_unfollow.txt`. It might take a while, so be patient. 
+This will unfollow the users in `people_to_unfollow.txt`. It might take a while.
 
 **5. Go through `errors.txt`**
 
