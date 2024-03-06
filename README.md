@@ -82,7 +82,7 @@ This will unfollow the users in `people_to_unfollow.txt`. It might take a while.
 
 It is likely some accounts weren't able to be unfollowed by the script for whatever reason. 
 
-You can try going back to your `.env` file and setting the `USERNAMES_FILENAME` to `errors`, saving, and then run the `unfollowList.py` program again to try unfollowing these users again. 
+You can try deleting the `people_to_unfollow.txt` file in this directory and changing the name of `errors.txt` to `people_to_unfollow.txt`, and then run the `unfollowList.py` program again to try unfollowing these users again. 
 
 Otherwise, you might just have to go and unfollow these people manually. `(\_("/)_/)`
 
