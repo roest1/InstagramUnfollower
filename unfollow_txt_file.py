@@ -43,7 +43,7 @@ def wait_and_click_button(button_text, user):
         )
         button.click()
     except WebDriverException as e:
-        print(f"An error occurred with {user}: {e}")
+        print(f"An error occurred with {user}")
         # Log error to file
         with open("errors.txt", "a+") as f:
             f.write(f"{user}\n")
