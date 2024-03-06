@@ -84,7 +84,7 @@ It is likely some accounts weren't able to be unfollowed by the script for whate
 
 You can try going back to your `.env` file and setting the `USERNAMES_FILENAME` to `errors`, saving, and then run the `unfollowList.py` program again to try unfollowing these users again. 
 
-Otherwise, you might just have to go and unfollow these people manually. (\_("/)_/)
+Otherwise, you might just have to go and unfollow these people manually. ( \\_("/)_/ )
 
 ---
 
